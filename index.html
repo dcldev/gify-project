@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timesheet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/gify.css">
+</head>
+
+<body>
+    <div class="container" id="row1">
+        <div class="col-10">
+            <div class="jumbotron">
+                <h1 class="display-4">THAT GIFY LIFE</h1>
+                <p class="lead">This is a simple web app that pulls GIFS from the GIFY API!</p>
+                <hr class="my-4">
+                <form>
+                    <div class="form-group">
+                        <label for="employeeNameInput">Your Move Kimosabe</label>
+                        <input class="form-control" id="addTings" placeholder="Your Move">
+                    </div>
+
+                </form>
+                <p>Click the SUBMIT button below to add more sweetastic GIFY buttons</p>
+                <button type="submit" class="btn btn-warning" id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2 class="card-header">Where Dem BUTTONS Go</h2>
+            <div class="card-body">
+                <div id="tings" class="d-flex justify-content-center">
+
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="card">
+                <h2 class="card-header">Where Dem GIFS Populate Dem Selves</h2>
+                <div class="card-body">
+                    <div class="d-flex justify-content-center flex-wrap" id="gifs">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+        <script src="assets/js/gify.js"></script>
+
+
+</body>
+
+</html>

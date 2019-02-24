@@ -1,9 +1,9 @@
 // create array of topics
-var tings = ["dog", "cat", "bird", "hamster", "rabbit"];
+var tings = ["dodge", "duck", "dip", "dive", "dodge again"];
 // for loop to create button for topics array
 $("#submit").on("click", function() {
   event.preventDefault();
-  var newTings = $("#addAnimal").val().trim();
+  var newTings = $("#addTings").val().trim();
   tings.push(newTings);
   buttons();
   console.log(tings);  
@@ -11,24 +11,24 @@ $("#submit").on("click", function() {
 
 
 function buttons(){
-  $("#topics").empty();
+  $("#tings").empty();
   for (var i = 0; i < tings.length; i++) {
-  var buttons = $('<button>').text(tings[i]).attr("data-animal",topics[i]).attr("class","animal-button");
-  buttons.appendTo(`#topics`);
+  var buttons = $('<button type="submit" class="btn btn-success">').text(tings[i]).attr("data-anything",tings[i]).attr("id","anything-button");
+  buttons.appendTo(`#tings`);
   }
 };
 
 buttons();
 
 //click event for buttons
-$(document).on("click", ".animal-button",function() {
+$(document).on("click", "#anything-button",function() {
     // Grabbing and storing the data-animal property value from the button
-    var animal = $(this).attr("data-animal");
+    var anything = $(this).attr("data-anything");
 
     // Constructing a queryURL using the animal name
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-      animal + "&api_key=FXVZKN8jBgfeM4X7Ilg2PlL26dAzt9wM&limit=10";
-    console.log(animal);
+      anything + "&api_key=FXVZKN8jBgfeM4X7Ilg2PlL26dAzt9wM&limit=10";
+    console.log(anything);
     // Performing an AJAX request with the queryURL
     $.ajax({
       url: queryURL,
@@ -49,7 +49,7 @@ $(document).on("click", ".animal-button",function() {
           var animalDiv = $("<div>");
 
           // Creating a paragraph tag with the result item's rating
-          var p = $("<p>").text("Rating: " + results[i].rating);
+          // var p = $("<p>").text("Rating: " + results[i].rating);
 
           // Creating and storing an image tag
           var animalImage = $("<img>");
@@ -57,7 +57,7 @@ $(document).on("click", ".animal-button",function() {
           animalImage.attr("src", results[i].images.fixed_height.url);
 
           // Appending the paragraph and image tag to the animalDiv
-          animalDiv.append(p);
+          // animalDiv.append(p);
           animalDiv.append(animalImage);
 
           // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
