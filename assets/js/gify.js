@@ -46,22 +46,22 @@ $(document).on("click", "#anything-button",function() {
         for (var i = 0; i < results.length; i++) {
 
           // Creating and storing a div tag
-          var animalDiv = $("<div>");
+          var anythingDiv = $("<div>");
 
           // Creating a paragraph tag with the result item's rating
           // var p = $("<p>").text("Rating: " + results[i].rating);
 
           // Creating and storing an image tag
-          var animalImage = $("<img>");
+          var anyImage = $("<img>");
           // Setting the src attribute of the image to a property pulled off the result item
-          animalImage.attr("src", results[i].images.fixed_height.url);
+          anyImage.attr("src", results[i].images.fixed_height.url);
 
           // Appending the paragraph and image tag to the animalDiv
           // animalDiv.append(p);
-          animalDiv.append(animalImage);
+          anythingDiv.append(anyImage);
 
           // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
-          $("#gifs").prepend(animalDiv);
+          $("#gifs").prepend(anythingDiv);
         }
       });
   });
