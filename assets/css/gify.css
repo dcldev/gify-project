@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+.card {
+    margin-top: 4px;
+}
+
+.jumbotron {
+    margin-top: 4px;
+}
+
 .col-10 {
     margin: 0px auto;
 }
